@@ -21,6 +21,9 @@ body{
     background: url("images/curls/curlsbrightenough.png") no-repeat center fixed;
     background-repeat: repeat;
 }
+h1{
+    opacity: 1;
+}
 
 section{
     padding: 6rem;
@@ -113,14 +116,38 @@ header{
     width: 100%;
     height: 100vh;
     position: fixed;
-    top: -100vh;
+    right: -100%;
     z-index: 50;
-    background-color: #070a0a;
+    background-color: #111116;
+    border-left: 0.35rem solid  #627aff;
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    transition: all 650ms cubic-bezier(1, 0, 0,1);
+
+}
+.topnav.open{
+    right: 0;
+    border-radius: initial;
+
+}
+ .projectnav{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: -100%;
+    z-index: 50;
+    background-color: #111116;
+    border-right: 0.35rem solid #a5fde7;
     border-bottom-right-radius: 100%;
     border-bottom-left-radius: 100%;
     transition: all 650ms cubic-bezier(1, 0, 0, 1);
 
 }
+.projectnav.open{
+    left: 0;
+    border-radius: initial;
+}
+
 
 .navlist{
     list-style: none;
@@ -131,6 +158,7 @@ header{
     align-items: center;
 
 }
+
 
 li{
     margin: 0.2rem;
@@ -152,11 +180,69 @@ li{
     -webkit-text-fill-color: transparent;
 }
 
-.topnav.open{
-    top: 0;
-    border-radius: initial;
-
+.projectContainer {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -5px;
+    overflow: hidden;
+    position: relative;
+    vertical-align: top;
+    width: 340px;
+    height: 228px;
+    cursor: pointer;
+  }
+  
+  .projectContainer img {
+  transition: 0.3s;
+  }
+  
+  .projectContainer:hover img {
+   transform: scale(1.1);
+   -webkit-transform: scale(1.1);
+  }
+  
+  .projectContainer h2 {
+      font-size: 2.5rem;
+      padding-top: 5%;
+      text-align: center;
+  }
+  .projectContainer h2:hover {
+    background: -webkit-linear-gradient(right, #ff8ca5, #627aff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+  
+  .projInfoContainer {
+    position: absolute;
+    background: rgba(5,5,5,0.8);
+    width: 100%;
+    height: 200%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: 0.2s;
+  }
+  
+  .projectContainer:hover .projInfoContainer {
+    opacity: 1;
+  }
+  
+  .projCategory {
+    
+  }
+  
+  .projSpecifics {  
+      font-size: 1.5rem;
+      text-align: center;
+   
+  }
+
+  .projInstructions{
+      margin-top: 1rem;
+      font-size: 1.5rem;
+  }
+
 
 .menutoggler{
     position: absolute;
@@ -170,15 +256,14 @@ li{
     cursor: pointer;
     z-index: 1500;
     transition: transform 650ms ease-out;
-  
-
 }
+
 
 .menutoggler #navtool {
 
         position: absolute;
-        top: 60%;
-        margin-top: 10px;
+        right: 60%;
+        margin-right: 10px;
         padding: .55rem 1rem;
         font-size: 1.2rem;
         font-weight: 500;
@@ -198,11 +283,9 @@ li{
         transition: all 0.2s ease-in-out;
        
 }
-
-.projecticon{
+.menutoggler2{
     position: absolute;
     top: 5rem;
-    right: 5rem;
     left: 5rem;
     width: 5rem;
     height: 4rem;
@@ -210,7 +293,12 @@ li{
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
-   
+    z-index: 1500;
+    transition: transform 650ms ease-out;
+}
+
+
+.projecticon{
     background: -webkit-linear-gradient(right, #ff8ca5, #627aff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -224,11 +312,11 @@ li{
  
 }
 
-.projecticon #routetool{
+.menutoggler2 #routetool{
     position: absolute;
    
-        top: 60%;
-        margin-top: 10px;
+        left: 60%;
+        margin-left: 10px;
         
         padding: .55rem 1rem;
         font-size: 1.2rem;
@@ -251,11 +339,11 @@ li{
 
 
 .menutoggler:hover #navtool{
-        top: 100%;
+        right: 100%;
         opacity: 0.9;
 }
-.projecticon:hover #routetool{
-    top: 100%;
+.menutoggler2:hover #routetool{
+    left: 100%;
     opacity: 0.9;
 }
 
@@ -270,6 +358,10 @@ li{
 
 .menutoggler.open #navtool{
     opacity: 0;
+}
+.menutoggler2.open #routetool{
+    opacity: 0;
+    
 }
 
 .bar{
@@ -351,7 +443,7 @@ li{
 
 .aboutheading h1{
     font-size: 10rem;
-    opacity: .3;
+    opacity: 0.3;
 }
 
 .aboutheading h6{
@@ -373,7 +465,9 @@ li{
 }
 
 .socialmedia{
+    display:flex;
     margin-top: 5rem;
+    clear:right;
 }
 
 .socialmedia i{
@@ -381,15 +475,14 @@ li{
     transition: color 650ms;
 }
 
-.fa-facebook-square:hover{
-    color: #4267b2;
-}
-
 .fa-instagram-square:hover{
-    color: #38a1f3;
+    color: #4b38f3;
+}
+.fa-github-square:hover{
+    color: #f5c542;
 }
 
-.fa-linkedin-square:hover{
+.fa-linkedin:hover{
     color: #ea4c89;
 }
 /*End about*/
@@ -406,13 +499,14 @@ li{
 .skill{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+   
     align-items: center;
     padding: 2rem;
 
 }
 
 .skill h1{
+    
     text-transform: uppercase;
     letter-spacing: 2px;
     margin: 2rem -2px 2rem 0;
@@ -425,6 +519,8 @@ li{
     background-color: #fff9fd;
     margin-bottom: 2rem;
     display: flex;
+    flex-direction: row;
+    text-align: center;
     transform: rotate(45deg);
 
 }
@@ -470,7 +566,7 @@ li{
     font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: 300;
-    opacity: 0.3;
+    opacity: 0.6;
 }
 .portfoliodescription .cta{
     display: inline-block;
@@ -508,7 +604,7 @@ li{
     text-transform: uppercase;
     font-weight: 300;
     margin-bottom: 1rem;
-    opacity: .3;
+    opacity: .4;
 }
 
 .timeline .date{
@@ -555,7 +651,7 @@ li{
 
 /*Start contact*/
 .contact{
-    background-color: #06061f;
+    background-color: #111116;
 }
 
 form{
@@ -574,7 +670,8 @@ textarea{
     padding: 1rem;
     margin-bottom: 5px;
     border: none;
-    outline-color: #00f7ff;
+    opacity: .9;
+    outline-color: #8cffd3;
 }
 
 input[type="submit"]{
@@ -593,6 +690,22 @@ input[type="submit"]:hover{
     background-color: #e42e4c;
 }
 
+button{
+    width: initial;
+    background-color: #627aff;
+    color: #eee;
+    padding:1rem 2rem;
+    border-radius: .8rem;
+    cursor: pointer;
+    transition: background-color 650ms;
+
+}
+
+button:hover{
+    color: #221e3f;
+    background-color: #e42e4c;
+}
+
 
 
 /*End contact*/
@@ -602,7 +715,7 @@ input[type="submit"]:hover{
 .copyright{
     width: 100%;
     text-align: center;
-    background-color: #16162d;
+    background-color: #111116;
     padding: 2rem 0;
     position: relative;
 }
@@ -655,7 +768,23 @@ input[type="submit"]:hover{
         font-size: 3.5rem;
     }
 }
+
+@media screen and (max-width: 900px){
+    .navlink{
+        font-size: 3.2rem;
+    }
+    .projectContainer.open .projInfoContainer{
+       
+        opacity: 1;
+    }
+    .projectContainer.open img{
+        transform: scale(1.1);
+   -webkit-transform: scale(1.1);
+        
+    }
+}
 @media screen and (max-width: 768px){
+  
     .landingtext h1{
         font-size: 15rem;
     }
@@ -687,11 +816,15 @@ input[type="submit"]:hover{
         margin: 0 2remm;
     }
     .iconcontainer {
-        width: 7rem;
-        height: 7rem;
+        flex-direction: column;
+        text-align: center;
+        width: 8rem;
+        height: 8rem;
     }
     .iconcontainer i{
         font-size: 4rem;
+        text-align: center;
+       
     }
     .timeline ul{
         margin: 0 0 0 auto;
@@ -710,7 +843,7 @@ input[type="submit"]:hover{
         top: 2rem;
         right: 2rem;
     }
-    .projecticon{
+    .menutoggler2{
         top: 2rem;
         left: 2rem;
     }

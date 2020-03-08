@@ -3,7 +3,15 @@ $(document).ready(function() {
     $(this).toggleClass('open');
     $('.topnav').toggleClass('open');
   });
+  $('.menutoggler2').on('click', function() {
+    $(this).toggleClass('open');
+    $('.projectnav').toggleClass('open');
+  });
 
+  $('.projectContainer').on('click', function() {
+    $(this).toggleClass('open');
+  });
+  
   $('.topnav .navlink').on('click', function() {
     $('.menutoggler').removeClass('open');
     $('.topnav').removeClass('open');
