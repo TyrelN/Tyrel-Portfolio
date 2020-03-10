@@ -509,7 +509,7 @@ li{
 .myskills{
     margin-top: 10rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    
     grid-gap: 2.5rem;
     text-align: center;
 }
@@ -910,9 +910,6 @@ button:hover{
 
 }
 
-@media screen and (max-width: 480px){
-.myskills{
-    margin-right: 5rem;
-    margin-left: 5rem;
-}}
+/* @media screen and (max-width: 480px){ */
+
 /*End media queries*/
