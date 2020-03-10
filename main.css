@@ -298,17 +298,19 @@ li{
 }
 
 
-.projecticon{
+.projecticon svg *{
+  
+    fill: url(#rg);
+    
     background: -webkit-linear-gradient(right, #ff8ca5, #627aff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    
 
 }
 
-.projecticon:hover{
+.projecticon:hover svg *{
+    fill: url(#rg2);
     background: -webkit-linear-gradient(right, #fff0d9, #a5fde7);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+   
  
 }
 
@@ -474,12 +476,21 @@ li{
     font-size: 5rem;
     transition: color 650ms;
 }
-
+.fa-github-square{
+    
+   font-size: 5rem;
+   
+}
+.fa-linkedin{
+    font-size: 5rem;
+}
 .fa-instagram-square:hover{
     color: #4b38f3;
+   
 }
 .fa-github-square:hover{
     color: #f5c542;
+   
 }
 
 .fa-linkedin:hover{
@@ -525,7 +536,7 @@ li{
 
 }
 
-.iconcontainer i{
+.iconcontainer svg{
     color: #2ad3c5;
     font-size: 5rem;
     margin: auto;
@@ -732,7 +743,7 @@ button:hover{
     animation: pulse 2s infinite;
 }
 
-.up i{
+.up svg{
     color: #16162d;
     font-size: 2rem;
     margin: auto;
