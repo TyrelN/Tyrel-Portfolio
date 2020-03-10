@@ -189,8 +189,8 @@ li{
     overflow: hidden;
     position: relative;
     vertical-align: top;
-    width: 340px;
-    height: 228px;
+    width: 30rem;
+    height: 20rem;
     cursor: pointer;
     
   }
@@ -509,7 +509,7 @@ li{
 .myskills{
     margin-top: 10rem;
     display: grid;
-    
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-gap: 2.5rem;
     text-align: center;
 }
@@ -792,7 +792,7 @@ button:hover{
         font-size: 3.2rem;
     }
     .projectContainer.open .projInfoContainer{
-       
+        
         opacity: 1;
     }
     .projectContainer.open img{
@@ -800,6 +800,8 @@ button:hover{
    -webkit-transform: scale(1.1);
         
     }
+    .container{max-width: 100%;}
+    
 }
 @media screen and (max-width: 768px){
   
@@ -910,6 +912,10 @@ button:hover{
 
 }
 
-/* @media screen and (max-width: 480px){ */
-
+@media screen and (max-width: 480px){
+    .myskills{
+        
+        grid-template-columns: initial;
+    }
+    }
 /*End media queries*/
