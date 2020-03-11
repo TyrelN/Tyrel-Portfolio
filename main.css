@@ -803,7 +803,8 @@ button:hover{
         
     }
     .container{max-width: 100%;}
-    
+
+
 }
 @media screen and (max-width: 768px){
   
@@ -813,6 +814,14 @@ button:hover{
     .landingtext h6{
         font-size: 1.7rem;
     }
+    .menutoggler:hover #navtool{
+        right: 100%;
+        opacity: 0;
+}
+    .menutoggler2:hover #routetool{
+    left: 100%;
+    opacity: 0;
+}
 
     .navlist{
         flex-direction: column;
