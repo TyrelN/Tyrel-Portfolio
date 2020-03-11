@@ -215,6 +215,7 @@ li{
   .projectContainer h2:hover {
     background: -webkit-linear-gradient(right, #ff8ca5, #627aff);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
   
@@ -235,10 +236,10 @@ li{
     opacity: 1;
   }
   
-  .projCategory {
+  /* .projCategory {
     
   }
-  
+   */
   .projSpecifics {  
       font-size: 1.5rem;
       text-align: center;
@@ -481,10 +482,7 @@ li{
     clear:right;
 }
 
-.socialmedia i{
-    font-size: 5rem;
-    transition: color 650ms;
-}
+
 .fa-github-square{
     
    font-size: 5rem;
@@ -494,15 +492,18 @@ li{
     font-size: 5rem;
 }
 .fa-instagram-square:hover{
+   
     color: #4b38f3;
    
 }
 .fa-github-square:hover{
-    color: #f5c542;
+    transition: color 650ms;
+    color: #f1c13b;
    
 }
 
 .fa-linkedin:hover{
+    transition: color 650ms;
     color: #ea4c89;
 }
 /*End about*/
@@ -767,7 +768,7 @@ button:hover{
 /*End footer*/
 
 /*Start animations*/
-@keyframes pulse{
+/* @keyframes pulse{
     0%{
         box-shadow: 0 0 0 0 rgba(87, 253, 225, 0.99);
     }
@@ -777,7 +778,7 @@ button:hover{
     100%{
         box-shadow: 0 0 0 0 rgba(87, 253, 225, 0.99);
     }
-}
+} */
 /*End animations*/
 
 /*Start media queries*/
