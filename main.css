@@ -422,7 +422,7 @@ li{
     font-size: 17rem;
     font-family: 'coquette', sans-serif;
     font-weight: 600;
-    background: linear-gradient(to top, #ffe6c6, #a5fde7, #fff0df, #a5fde7);
+    background: linear-gradient(to top,#fff0d9,#a5fde7, #18dbaa, #a5fde7, #a5fde7, #fff0d9);
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -497,13 +497,13 @@ li{
    
 }
 .fa-github-square:hover{
-    transition: color 650ms;
+    
     color: #f1c13b;
    
 }
 
 .fa-linkedin:hover{
-    transition: color 650ms;
+    
     color: #ea4c89;
 }
 /*End about*/
