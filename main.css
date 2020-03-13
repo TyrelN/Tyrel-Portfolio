@@ -422,7 +422,7 @@ li{
     font-size: 17rem;
     font-family: 'coquette', sans-serif;
     font-weight: 600;
-    background: linear-gradient(to top,#fff0d9,#a5fde7, #18dbaa, #a5fde7, #a5fde7, #fff0d9);
+    background: linear-gradient(to top,#fff0d9,#a5fde7, #5ed8b9, #a5fde7, #a5fde7, #fff0d9);
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
