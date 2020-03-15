@@ -1,5 +1,5 @@
-/*Resource for night sky: https://www.script-tutorials.com/night-sky-with-twinkling-stars/ */
-/* start star background */
+/*Resource for night sky implementation: https://www.script-tutorials.com/night-sky-with-twinkling-stars/ */
+/* start starry background */
 .stars, .twinkling, .clouds {
     
     top:0;
@@ -30,8 +30,10 @@
 }
   
   .stars {
+    top:0%;
     background:#000 url(images/stars.png) repeat top center;
     z-index:0;
+   
   }
   
   .twinkling{
@@ -74,7 +76,7 @@
 }
      */
 
-  /* end star background */
+  /* end background */
 /*Start global*/
 *{
     margin: 0;
@@ -98,8 +100,8 @@ span{
 body{
     width: 100%;
     height: 100%;
-    background: url("images/curls/curlsbrightenough.png") no-repeat center fixed;
-    background-repeat: repeat;
+    background-color: black;
+   
 }
 h1{
     opacity: 1;
@@ -465,9 +467,7 @@ li{
 
 
 
-.menutoggler.open{
-    /* transform: rotate(-45deg); */
-}
+
 
 .menutoggler.open #navtool{
     opacity: 0;
