@@ -6,7 +6,7 @@ $(document).ready(function() {
     $(this).toggleClass('open');
     $('.topnav').toggleClass('open');
     navOn = !navOn;
-    if(projectOn == true){
+    if(projectOn === true){
       $('.projectnav').toggleClass('open');
         projectOn = false;
     }
@@ -15,7 +15,7 @@ $(document).ready(function() {
     $(this).toggleClass('open');
     $('.projectnav').toggleClass('open');
     projectOn = !projectOn;
-    if(navOn == true){
+    if(navOn === true){
       $('.topnav').toggleClass('open');
        navOn = false;
     }
@@ -41,7 +41,7 @@ $(document).ready(function() {
 
 
   $('.projectContainer').on('click', function() {
-    if(switcher == false){
+    if(switcher === false){
       $(this).toggleClass('open');
   
     }

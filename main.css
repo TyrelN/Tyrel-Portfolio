@@ -1,4 +1,10 @@
 /*Resource for night sky implementation: https://www.script-tutorials.com/night-sky-with-twinkling-stars/ */
+/* Created by Script Tutorials
+License (if not mentioned otherwise in the files): http://www.script-tutorials.com/terms-of-use/ */
+
+
+
+
 /* start starry background */
 .stars, .twinkling, .clouds {
     
@@ -11,7 +17,7 @@
     display:block;
   }
 
-  
+  /* moving the alpha image across the screen on loop */
 @keyframes move-twink-back {
     from {background-position:0 0;}
     to {background-position:-10000px 5000px;}
@@ -40,11 +46,11 @@
     background:transparent url(images/twinkling.png) repeat top center;
     z-index:1;
   
-    -moz-animation:move-twink-back 500s linear infinite;
-    -ms-animation:move-twink-back 500s linear infinite;
-    -o-animation:move-twink-back 500s linear infinite;
-    -webkit-animation:move-twink-back 500s linear infinite;
-    animation:move-twink-back 500s linear infinite;
+    -moz-animation:move-twink-back 490s linear infinite;
+    -ms-animation:move-twink-back 490s linear infinite;
+    -o-animation:move-twink-back 490s linear infinite;
+    -webkit-animation:move-twink-back 490s linear infinite;
+    animation:move-twink-back 490s linear infinite;
   }
 /* cloud code for traversing across the screen */
   /* @keyframes move-clouds-back {
