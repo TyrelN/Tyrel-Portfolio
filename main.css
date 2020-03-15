@@ -1,3 +1,80 @@
+/*Resource for night sky: https://www.script-tutorials.com/night-sky-with-twinkling-stars/ */
+/* start star background */
+.stars, .twinkling, .clouds {
+    
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    display:block;
+  }
+
+  
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+  
+  .stars {
+    background:#000 url(images/stars.png) repeat top center;
+    z-index:0;
+  }
+  
+  .twinkling{
+    background:transparent url(images/twinkling.png) repeat top center;
+    z-index:1;
+  
+    -moz-animation:move-twink-back 500s linear infinite;
+    -ms-animation:move-twink-back 500s linear infinite;
+    -o-animation:move-twink-back 500s linear infinite;
+    -webkit-animation:move-twink-back 500s linear infinite;
+    animation:move-twink-back 500s linear infinite;
+  }
+/* cloud code for traversing across the screen */
+  /* @keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-webkit-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-moz-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-ms-keyframes move-clouds-back {
+    from {background-position: 0;}
+    to {background-position:10000px 0;}
+}
+
+.clouds{
+    background:transparent url(images/clouds3.png) repeat top center;
+    z-index:3;
+
+  -moz-animation:move-clouds-back 200s linear infinite;
+  -ms-animation:move-clouds-back 200s linear infinite;
+  -o-animation:move-clouds-back 200s linear infinite;
+  -webkit-animation:move-clouds-back 200s linear infinite;
+  animation:move-clouds-back 200s linear infinite;
+}
+     */
+
+  /* end star background */
 /*Start global*/
 *{
     margin: 0;
@@ -212,8 +289,20 @@ li{
       padding-top: 5%;
       text-align: center;
   }
-  .projectContainer h2:hover {
+  .projectContainer h3 {
+    font-size: 2.5rem;
+  
+    text-align: center;
+}
+  .projectContainer h3{
     background: -webkit-linear-gradient(right, #ff8ca5, #627aff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.projectContainer h3:hover {
+    background: -webkit-linear-gradient(right, #6fffb7, #ffffff);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -249,7 +338,7 @@ li{
   }
 
   .projInstructions{
-      margin-top: 1rem;
+    
       margin-left: 2rem;
       font-size: 1.5rem;
   }
@@ -317,6 +406,20 @@ li{
     
 
 }
+.navicon svg *{
+    fill: url(#rg);
+  
+    
+
+}
+.navicon:hover svg *{
+    fill: url(#rg2);
+    background: -webkit-linear-gradient(right, #fff0d9, #a5fde7);
+   
+ 
+}
+
+
 
 .projecticon:hover svg *{
     fill: url(#rg2);
@@ -362,11 +465,8 @@ li{
 
 
 
-
-
-
 .menutoggler.open{
-    transform: rotate(-45deg);
+    /* transform: rotate(-45deg); */
 }
 
 .menutoggler.open #navtool{
@@ -376,36 +476,7 @@ li{
     opacity: 0;  
 }
 
-.bar{
-    background: linear-gradient(to right, #ff8ca5, #627aff);
-    width: 100%;
-    height: 4px;
-    border-radius: .8rem;
 
-}
-
-.bar.half{
-    width: 50%;
-
-}
-
-.bar.start{
-    transform-origin: right;
-    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-}
-
-.open .bar.start{
-    transform: rotate(-450deg) translateX(.8rem);
-}
-.bar.end{
-    align-self: flex-end;
-    transform-origin: left;
-    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-}
-
-.open .bar.end{
-    transform: rotate(-450deg) translateX(-.8rem);
-}
 
 .landingtext{
     position: absolute;
