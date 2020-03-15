@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="main.min.css" />
+    <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="https://use.typekit.net/fjk4zyq.css">
     <meta charset="UTF-8" />
     <link href="https://fonts.googleapis.com/css?family=Mystery+Quest&display=swap" rel="stylesheet">
@@ -249,20 +249,30 @@
                                 <h1>Contact</h1>
                                 <h6>Get in touch!</h6>
                             </div>
-                            <form id = "myForm" action="https://app.99inbound.com/api/e/k9LaDpoK" method = "POST" target="_blank" data-aos="fade-up" data-aos-delay="300">
-                                <label for="name">Name:</label>
-                                <input type = "text" id="name" name="name" placeholder="eg. Bigwig Smith" required>
-                                <label for="email">Email:</label>
-                                <input type = "email" id="email" name="email" placeholder="eg. great.opportunity@gmail.com" required>
-                                <label for="company">Company:</label>
-                                <input type = "text" id="company" name="company" placeholder="Company name" >
-                                <label for="subject">Subject:</label>
-                                <input type = "text" id="subject" name="subject" placeholder="enter a subject" required>
-                                <label for="message">Message:</label>
-                                <textarea name="message" id="message" cols="10" rows="10" required></textarea>
-                                <input type="submit" name="submit">
-                                <!-- <button type = "button" onclick="sendEmail()" value="send an email to me">Submit</button> -->
-                            </form>
+                            <form id = "myForm" name = "contact" method = "POST" data-netlify = "true" target="_blank" data-aos="fade-up" data-aos-delay="300">
+                             
+                                <p>
+                                  <label>Your Name: <input type="text" name="name" /></label>   
+                                </p>
+                                <p>
+                                  <label>Your Email: <input type="email" name="email" /></label>
+                                </p>
+                                <p>
+                                  <label>Your Role: <select name="role[]" multiple>
+                                    <option value="employer">Employer</option>
+                                    <option value="student">Student</option>
+                                    <option value="entrepreneur">Entrepreneur</option>
+                                    <option value="other">Other</option>
+                                  </select></label>
+                                </p>
+                                <p>
+                                  <label>Message: <textarea name="message"></textarea></label>
+                                </p>
+                                <p>
+                                  <button type="submit">Send</button>
+                                </p>
+                              </form>
+                           
                             </div>
                             </section>
 
@@ -275,7 +285,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script type="text/javascript" src="https://app.99inbound.com/99inbound.js"></script>
-    <script src="main.min.js"></script>
+   
+    <script src="main.js"></script>
   </body>
 </html>

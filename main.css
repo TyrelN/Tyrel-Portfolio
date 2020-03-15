@@ -46,11 +46,11 @@ License (if not mentioned otherwise in the files): http://www.script-tutorials.c
     background:transparent url(images/twinkling.png) repeat top center;
     z-index:1;
   
-    -moz-animation:move-twink-back 490s linear infinite;
-    -ms-animation:move-twink-back 490s linear infinite;
-    -o-animation:move-twink-back 490s linear infinite;
-    -webkit-animation:move-twink-back 490s linear infinite;
-    animation:move-twink-back 490s linear infinite;
+    -moz-animation:move-twink-back 500s linear infinite;
+    -ms-animation:move-twink-back 500s linear infinite;
+    -o-animation:move-twink-back 500s linear infinite;
+    -webkit-animation:move-twink-back 500s linear infinite;
+    animation:move-twink-back 500s linear infinite;
   }
 /* cloud code for traversing across the screen */
   /* @keyframes move-clouds-back {
