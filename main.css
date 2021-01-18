@@ -62,12 +62,12 @@ html, body{
     overflow-x: hidden;
 }
 html{
-   font-size: 10px;
+   font-size: 12px;
     font-family: 'Roboto Condensed', sans-serif;
-    color: #54ABAB;
+    color: #81d7d7;
 
 font-style: normal;
-   color: #54ABAB;
+   color: #81d7d7;
 }
 span{
     font-family: 'Roboto Condensed', sans-serif;
@@ -274,7 +274,7 @@ li{
 
 /*noinspection CssInvalidPropertyValue*/
 .projectContainer h3{
-    background: -webkit-linear-gradient(right, #ff8ca5, #627aff);
+    background: -webkit-linear-gradient(right, #627aff, #b3bfff);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -282,7 +282,7 @@ li{
 
 /*noinspection ALL*/
 .projectContainer h3:hover {
-    background: -webkit-linear-gradient(right, #6fffb7, #fdfff5);
+    background: -webkit-linear-gradient(right, #6fffb7, #bdfaf1);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -382,7 +382,7 @@ li{
   
     fill: url(#rg);
     
-    background: -webkit-linear-gradient(right, #ff8ca5, #627aff);
+    background: -webkit-linear-gradient(right, #58dba2, #82ffff);
     
 
 }
@@ -638,7 +638,7 @@ li{
     font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: 300;
-    color: #627aff;
+    color: #6284FF;
     opacity: 0.9;
 }
 .portfoliodescription .cta{
@@ -646,7 +646,7 @@ li{
     margin-top: 2.5rem;
     font-size: 1.5rem;
     text-transform: uppercase;
-    color: #627aff;
+    color: #6284FF;
     transition: color 650ms;
 }
 .portfoliodescription .cta:hover{
