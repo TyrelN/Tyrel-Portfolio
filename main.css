@@ -37,20 +37,20 @@ License (if not mentioned otherwise in the files): http://www.script-tutorials.c
   
   .stars {
     top:0;
-    background:#000 url(images/stars.png) repeat top center;
+    background:#000 url(images/goldenstars.png) repeat top center;
     z-index:0;
    
   }
   
   .twinkling{
-    background:transparent url(images/twinkling.png) repeat top center;
+    background:transparent url(images/twinkling3.png) repeat top center;
     z-index:1;
   
-    -moz-animation:move-twink-back 500s linear infinite;
-    -ms-animation:move-twink-back 500s linear infinite;
-    -o-animation:move-twink-back 500s linear infinite;
-    -webkit-animation:move-twink-back 500s linear infinite;
-    animation:move-twink-back 500s linear infinite;
+    -moz-animation:move-twink-back 700s linear infinite;
+    -ms-animation:move-twink-back 700s linear infinite;
+    -o-animation:move-twink-back 700s linear infinite;
+    -webkit-animation:move-twink-back 700s linear infinite;
+    animation:move-twink-back 700s linear infinite;
   }
 
 *{
@@ -60,14 +60,15 @@ License (if not mentioned otherwise in the files): http://www.script-tutorials.c
 }
 html, body{
     overflow-x: hidden;
+    
 }
 html{
    font-size: 12px;
     font-family: 'Roboto Condensed', sans-serif;
-    color: #81d7d7;
+    color: #187070;
 
 font-style: normal;
-   color: #81d7d7;
+   color: #FAC29A;
 }
 span{
     font-family: 'Roboto Condensed', sans-serif;
@@ -75,7 +76,7 @@ span{
 body{
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: #1C1E26;
    
 }
 h1{
@@ -122,7 +123,7 @@ img{
 
 .sectionheading h1{
     font-size: 3.5rem;
-    color: rgb(139, 243, 226);
+    color: #FAB795;
     text-transform: uppercase;
     font-weight: 300;
     position: relative;
@@ -137,7 +138,7 @@ img{
     bottom: -.5rem;
     left: 50%;
     transform: translateX(-50%);
-    color: rgb(71, 193, 161);
+    color: #FAB795;
 }
 
 .sectionheading h1::before{
@@ -177,8 +178,8 @@ header{
     top: 0;
     right: -100%;
     z-index: 50;
-    background-color: #111116;
-    border-left: 0.35rem solid  #627aff;
+    background-color: #1A1C23;
+    border-left: 0.35rem solid  #F09383;
     
     
     transition: transform 650ms cubic-bezier(1, 0, 0, 1);
@@ -189,24 +190,7 @@ header{
     border-radius: initial;
 
 }
- .projectnav{
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: -100%;
-    z-index: 50;
-    background-color: #111116;
-    border-right: 0.35rem solid #627aff;
-    
-    transition: transform 650ms cubic-bezier(1, 0, 0, 1);
 
-}
-.projectnav.open{
-    transform: translate3d(100%,0,0);
-    /* left: 0; */
-    border-radius: initial;
-}
 
 
 .navlist{
@@ -234,95 +218,11 @@ li{
 
 .navlink:hover,
 .navlink:focus{
-    background: linear-gradient(to top, #6fffb7, #fdfff5);
+    background: linear-gradient(to top, #F09383, #E95678);
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
-.projectContainer {
-    display: inline-block;
-    vertical-align: top;
-    margin-right: -5px;
-    overflow: hidden;
-    position: relative;
-    width: 35rem;
-    height: 25rem;
-    cursor: pointer;
-    
-  }
-  
-  .projectContainer img {
-  transition: 0.3s;
-  }
-  
-  .projectContainer:hover img {
-   transform: scale(1.1);
-   -webkit-transform: scale(1.1);
-  }
-  
-  .projectContainer h2 {
-      font-size: 2.5rem;
-      padding-top: 5%;
-      text-align: center;
-  }
-  .projectContainer h3 {
-    font-size: 2.5rem;
-  
-    text-align: center;
-}
-
-/*noinspection CssInvalidPropertyValue*/
-.projectContainer h3{
-    background: -webkit-linear-gradient(right, #627aff, #b3bfff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-/*noinspection ALL*/
-.projectContainer h3:hover {
-    background: -webkit-linear-gradient(right, #6fffb7, #bdfaf1);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-  
-  .projInfoContainer {
-    position: absolute;
-    background: rgba(5,5,5,0.8);
-    width: 100%;
-    height: 200%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    opacity: 0;
-    transition: 0.2s;
-    
-  }
-  
-  .projectContainer:hover .projInfoContainer {
-    opacity: 1;
-  }
-  
-  /* .projCategory {
-    
-  }
-   */
-  .projSpecifics {  
-      font-size: 1.5rem;
-      text-align: center;
-      margin-right: 2rem;
-      margin-left: 2rem;
-     
-  }
-
-  .projInstructions{
-    
-      margin-left: 2rem;
-      font-size: 1.5rem;
-  }
-
 
 .menutoggler{
     position: absolute;
@@ -350,7 +250,7 @@ li{
         white-space: nowrap;
         color: #000;
         border-radius: 50px;
-        background-color: #a3f6d0;
+        background-color: #FAC29A;
         box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1),
           0 5px 15px rgba(0, 0, 0, 0.07);
          
@@ -378,14 +278,7 @@ li{
 }
 
 
-.projecticon svg *{
-  
-    fill: url(#rg);
-    
-    background: -webkit-linear-gradient(right, #58dba2, #82ffff);
-    
 
-}
 .navicon svg *{
     fill: url(#rg);
   
@@ -394,19 +287,14 @@ li{
 }
 .navicon:hover svg *{
     fill: url(#rg2);
-    background: -webkit-linear-gradient(right, #fff0d9, #a5fde7);
+    background: -webkit-linear-gradient(right, #27D796, #09F7A0);
    
  
 }
 
 
 
-.projecticon:hover svg *{
-    fill: url(#rg2);
-    background: -webkit-linear-gradient(right, #fff0d9, #a5fde7);
-   
- 
-}
+
 
 .menutoggler2 #routetool{
     position: absolute;
@@ -471,7 +359,7 @@ li{
     font-size: 12rem;
     font-family: 'Exo 2', sans-serif;
     font-weight: 500;
-    background: linear-gradient(to top, #fff0d9,#5ed8b9, #54abab, #a5fde7, #a5fde7, #fff0d9);
+    background: linear-gradient(to top,#F09383, #FAC29A);
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -499,7 +387,7 @@ li{
     text-transform: uppercase;
     line-height: 0;
     margin-bottom: 6rem;
-    color: #5ED8B9;
+    color: #FAB795;
     
 }
 
@@ -542,20 +430,20 @@ li{
 .fa-linkedin{
     font-size: 5rem;
 }
-.fa-instagram-square:hover{
+/* .fa-instagram-square:hover{
    
     color: #4b38f3;
    
-}
+} */
 .fa-github-square:hover{
     
-    color: #f1c13b;
+    color: #e7b275;
    
 }
 
 .fa-linkedin:hover{
     
-    color: #ea4c89;
+    color: #f37782;
 }
 /*End about*/
 
@@ -587,8 +475,8 @@ li{
 .iconcontainer{
     width: 10rem;
     height: 10rem;
-    border: 3px solid #21cac2;
-    background-color: #3a4141;
+    border: 3px solid #EC6A88;
+    background-color: #232530;
     margin-bottom: 2rem;
     display: flex;
     flex-direction: row;
@@ -598,7 +486,7 @@ li{
 }
 
 .iconcontainer svg{
-    color: #2ad3c5;
+    color: #EC6A88;
     font-size: 5rem;
     margin: auto;
     transform: rotate(-45deg);
@@ -638,7 +526,7 @@ li{
     font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: 300;
-    color: #6284FF;
+    color: #fc88a5;
     opacity: 0.9;
 }
 .portfoliodescription .cta{
@@ -646,11 +534,11 @@ li{
     margin-top: 2.5rem;
     font-size: 1.5rem;
     text-transform: uppercase;
-    color: #6284FF;
+    color: #7b93ff;
     transition: color 650ms;
 }
 .portfoliodescription .cta:hover{
-    color: #ec4f99;
+    color: #f794ab;
 }
 
 .portfolioimg {
@@ -660,7 +548,7 @@ li{
 
 /*Start timeline*/
 .timeline ul{
-    border-left: 4px solid #627aff;
+    border-left: 4px solid #F09383;
     border-radius: .8rem;
     background-color: rgba(0, 0, 0, 0.05);
     margin: 0 auto;
@@ -713,7 +601,7 @@ li{
 
 .timeline .date::after{
     content: '';
-    box-shadow: 0 0 0 4px #5dfab9;
+    box-shadow: 0 0 0 4px #EC6A88;
     border-radius: 100%;
     left: -8rem;
     height: 1.5rem;
@@ -724,7 +612,7 @@ li{
 
 /*Start contact*/
 .contact{
-    background-color: #111116;
+    background-color: #1A1C23;
 }
 
 form{
@@ -744,13 +632,13 @@ textarea{
     margin-bottom: 5px;
     border: none;
     opacity: .9;
-    outline-color: #8cffd3;
+    outline-color: #FAB795;
 }
 
 input[type="submit"]{
     width: initial;
-    background-color: #627aff;
-    color: #ccfff6;
+    background-color: #B877DB;
+    color: #3dbff3;
     padding:1rem 2rem;
     border-radius: .8rem;
     cursor: pointer;
@@ -760,13 +648,13 @@ input[type="submit"]{
 
 input[type="submit"]:hover{
     color: #221e3f;
-    background-color: #e42e4c;
+    background-color: #f78195;
 }
 
 button{
     width: initial;
-    background-color: #627aff;
-    color: #ccfff6;
+    background-color: #2E303E;
+    color: #ffefdd;
     padding:1rem 2rem;
     border-radius: .8rem;
     cursor: pointer;
@@ -775,8 +663,8 @@ button{
 }
 
 button:hover{
-    color: #221e3f;
-    background-color: #e42e4c;
+    color: #2E303E;
+    background-color: #ffefdd;
 }
 
 
@@ -788,7 +676,7 @@ button:hover{
 .copyright{
     width: 100%;
     text-align: center;
-    background-color: #111116;
+    background-color: #16161C;
     padding: 2rem 0;
     position: relative;
 }
@@ -797,7 +685,7 @@ button:hover{
     position: absolute;
     width: 5rem;
     height: 5rem;
-    background-color: #82beb2;
+    background-color: #8becd9;
     top: -2.5rem;
     right: 5rem;
     border-radius: 100%;
